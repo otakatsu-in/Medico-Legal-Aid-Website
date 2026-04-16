@@ -14,33 +14,12 @@ import { Label } from "@/components/ui/label";
 import logoImg from "@assets/Company_logo_1776338533281.png";
 import drVinayImg from "@assets/Dr_Vinay_pic_1_1776338533281.JPG";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/Navbar";
 
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen font-sans bg-background text-foreground">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src={logoImg} alt="MedicoLegalAid Logo" className="h-14 w-14 object-contain" />
-            <span className="font-serif text-xl font-bold text-primary tracking-tight hidden sm:block">
-              MedicoLegalAid
-            </span>
-          </div>
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
-            <a href="#course" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Course</a>
-            <a href="#modules" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Modules</a>
-            <Link href="/hospitals" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">For Hospitals</Link>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
-          </div>
-          <div>
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-sm">
-              <a href="#enroll">Join Course Now</a>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navbar activePage="home" />
 
       {/* Hero Section — 2-column with embedded video */}
       <section className="relative py-20 lg:py-28 overflow-hidden bg-primary">
