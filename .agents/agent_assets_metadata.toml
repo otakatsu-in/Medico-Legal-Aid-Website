@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "GnpXz07kreMaBtbhBeewu"
+uri = "file://artifacts/medicolegalaid/public/hero-bg.png"
+type = "image"
+title = "Golden gavel on medical books"
+
+[[generated]]
+id = "jn63ed_TFfVgRcUO8LjN4"
+uri = "file://artifacts/medicolegalaid/public/doctor-legal.png"
+type = "image"
+title = "Doctor reviewing legal document"

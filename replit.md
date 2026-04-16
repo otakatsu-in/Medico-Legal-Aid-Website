@@ -2,7 +2,7 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+pnpm workspace monorepo using TypeScript. Contains the MedicoLegalAid.com marketing website — a professional frontend-only site for selling a Medico-Legal Masterclass course to Indian doctors, with an additional Hospital Legal Audit section.
 
 ## Stack
 
@@ -15,6 +15,19 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+
+## Artifacts
+
+### medicolegalaid (React + Vite, previewPath: "/")
+Frontend-only marketing website for MedicoLegalAid.com.
+- Single-page application with smooth-scroll sections
+- Deep navy + gold color theme
+- Sections: Hero, Legal Risks, Course Overview, 8 Modules, About Instructor, Key Legal Facts, Trust, Hospital Audit (new), Contact/CTA, Footer
+- framer-motion animations
+- No backend calls — all data hardcoded
+
+### api-server (Express, previewPath: "/api")
+Basic Express API server with health check. Not used by the frontend.
 
 ## Key Commands
 
