@@ -30,7 +30,7 @@ const Home = () => {
             <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">About</a>
             <a href="#course" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Course</a>
             <a href="#modules" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Modules</a>
-            <a href="#hospitals" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">For Hospitals</a>
+            <Link href="/hospitals" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">For Hospitals</Link>
             <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Contact</a>
           </div>
           <div>
