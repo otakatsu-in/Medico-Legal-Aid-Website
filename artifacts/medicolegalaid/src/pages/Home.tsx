@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import logoImg from "@assets/Company_logo_1776338533281.png";
+import drVinayImg from "@assets/Dr_Vinay_pic_1_1776338533281.JPG";
 
 const Home = () => {
   return (
@@ -19,8 +21,8 @@ const Home = () => {
       <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Scale className="h-8 w-8 text-primary" />
-            <span className="font-serif text-2xl font-bold text-primary tracking-tight">
+            <img src={logoImg} alt="MedicoLegalAid Logo" className="h-14 w-14 object-contain" />
+            <span className="font-serif text-xl font-bold text-primary tracking-tight hidden sm:block">
               MedicoLegalAid
             </span>
           </div>
@@ -79,6 +81,31 @@ const Home = () => {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-20 bg-background border-b border-border">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-3xl font-serif font-bold text-primary mb-4">See the Course in Action</h2>
+            <p className="text-lg text-muted-foreground mb-10">Watch Dr. Vinaykumar explain how this masterclass transforms how doctors approach medicolegal challenges.</p>
+            <div className="relative w-full rounded-sm overflow-hidden shadow-2xl border border-border" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                src="https://drive.google.com/file/d/1-5iOvbyBMe51onyFqO9tXm7tH2VfJjQG/preview"
+                className="absolute inset-0 w-full h-full"
+                allow="autoplay"
+                allowFullScreen
+                title="MedicoLegalAid Course Preview"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -241,11 +268,11 @@ const Home = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 rounded-sm"></div>
+              <div className="absolute inset-0 bg-accent translate-x-4 translate-y-4 rounded-sm"></div>
               <img 
-                src="/doctor-legal.png" 
-                alt="Dr. Vinaykumar reviewing legal documents" 
-                className="relative z-10 w-full h-[500px] object-cover rounded-sm grayscale-[20%] contrast-125"
+                src={drVinayImg}
+                alt="Dr. Vinaykumar" 
+                className="relative z-10 w-full h-[500px] object-cover object-top rounded-sm"
               />
             </motion.div>
             
@@ -459,8 +486,8 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <Scale className="h-8 w-8 text-accent" />
+              <div className="flex items-center gap-3 mb-6">
+                <img src={logoImg} alt="MedicoLegalAid Logo" className="h-14 w-14 object-contain brightness-0 invert" />
                 <span className="font-serif text-2xl font-bold text-white tracking-tight">
                   MedicoLegalAid
                 </span>
