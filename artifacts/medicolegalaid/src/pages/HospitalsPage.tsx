@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import logoImg from "@assets/Company_logo_1776338533281.png";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const faqs = [
   {
@@ -410,20 +411,20 @@ export default function HospitalsPage() {
               <div className="space-y-5 mb-10">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border shrink-0">
-                    <Mail className="h-5 w-5 text-primary" />
+                    <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Email</p>
-                    <p className="font-medium text-foreground">audit@medicolegalaid.com</p>
+                    <p className="font-bold text-xs text-muted-foreground uppercase tracking-wider mb-0.5">WhatsApp / Call</p>
+                    <a href="https://wa.me/919108764680" className="font-medium text-primary hover:underline">+91 91087 64680</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center border border-border shrink-0">
-                    <Phone className="h-5 w-5 text-primary" />
+                    <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Phone / WhatsApp</p>
-                    <p className="font-medium text-foreground">Contact via website form</p>
+                    <p className="font-bold text-xs text-muted-foreground uppercase tracking-wider mb-0.5">Email</p>
+                    <a href="mailto:contact@medicolegalaid.com" className="font-medium text-primary hover:underline">contact@medicolegalaid.com</a>
                   </div>
                 </div>
               </div>
@@ -537,6 +538,7 @@ export default function HospitalsPage() {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 }

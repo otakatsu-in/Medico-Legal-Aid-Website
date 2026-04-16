@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import logoImg from "@assets/Company_logo_1776338533281.png";
 import drVinayImg from "@assets/Dr_Vinay_pic_1_1776338533281.JPG";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Home = () => {
   return (
@@ -41,71 +42,84 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-40 lg:pt-48 lg:pb-56 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero-bg.png" 
-            alt="Golden gavel on medical books" 
-            className="w-full h-full object-cover object-center opacity-40"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/80 mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-primary/40"></div>
-        </div>
-        
+      {/* Hero Section — 2-column with embedded video */}
+      <section className="relative py-20 lg:py-28 overflow-hidden bg-primary">
+        <div className="absolute inset-0 opacity-10"
+          style={{ backgroundImage: "radial-gradient(circle at 80% 50%, hsl(43 74% 49%) 0%, transparent 55%)" }}
+        />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left — Text */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, x: -24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/30 text-accent-foreground mb-6 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 border border-accent/30 mb-6 backdrop-blur-sm">
                 <AlertTriangle className="h-4 w-4 text-accent" />
                 <span className="text-xs font-bold tracking-wider uppercase text-accent">Medical negligence cases are rising. Ignorance of law is no longer an excuse.</span>
               </div>
-              <h1 className="text-5xl lg:text-7xl font-serif font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-white leading-tight mb-6">
                 Protect Your Practice. <br/>
                 <span className="text-accent">Master Medico-Legal Knowledge.</span>
               </h1>
-              <p className="text-xl text-primary-foreground/80 mb-10 leading-relaxed max-w-2xl font-light">
+              <p className="text-lg text-white/75 mb-8 leading-relaxed font-light">
                 Expert-led online masterclasses that help practising doctors navigate everyday legal challenges — confidently, safely, and professionally.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="xl" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8 h-14 rounded-sm font-semibold">
+              <div className="flex flex-wrap gap-4 mb-8">
+                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-base px-7 h-12 rounded-sm font-semibold">
                   <a href="#enroll">Join Course Now</a>
                 </Button>
-                <Button asChild size="xl" variant="outline" className="text-lg px-8 h-14 rounded-sm font-semibold border-white/20 text-primary hover:bg-white/10 hover:text-white bg-white">
+                <Button asChild size="lg" variant="outline" className="text-base px-7 h-12 rounded-sm font-semibold border-white/30 text-white hover:bg-white/10 bg-transparent">
                   <a href="#course">Learn More</a>
                 </Button>
               </div>
+              {/* Quick contact strip */}
+              <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10">
+                <a
+                  href="https://wa.me/919108764680"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-[#25D366]">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                  WhatsApp Us
+                </a>
+                <a href="mailto:contact@medicolegalaid.com" className="flex items-center gap-2 text-white/80 hover:text-white text-sm transition-colors">
+                  <Mail className="h-4 w-4 text-accent" />
+                  contact@medicolegalaid.com
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Right — Video */}
+            <motion.div
+              initial={{ opacity: 0, x: 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+            >
+              <div className="relative">
+                <div className="text-center mb-4">
+                  <p className="text-accent font-semibold text-sm uppercase tracking-wider">Dr. Vinaykumar — Why This Course Matters</p>
+                </div>
+                <div className="relative w-full rounded-sm overflow-hidden border-2 border-accent/30 shadow-2xl" style={{ paddingTop: "56.25%" }}>
+                  <iframe
+                    src="https://drive.google.com/file/d/1-5iOvbyBMe51onyFqO9tXm7tH2VfJjQG/preview"
+                    className="absolute inset-0 w-full h-full"
+                    allow="autoplay"
+                    allowFullScreen
+                    title="Dr. Vinaykumar explains the MedicoLegal Masterclass"
+                  />
+                </div>
+                <div className="mt-4 flex items-center gap-2 justify-center text-white/60 text-xs">
+                  <PlayCircle className="h-4 w-4 text-accent" />
+                  Watch Dr. Vinaykumar explain why every doctor needs this course
+                </div>
+              </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <section className="py-20 bg-background border-b border-border">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="text-3xl font-serif font-bold text-primary mb-4">See the Course in Action</h2>
-            <p className="text-lg text-muted-foreground mb-10">Watch Dr. Vinaykumar explain how this masterclass transforms how doctors approach medicolegal challenges.</p>
-            <div className="relative w-full rounded-sm overflow-hidden shadow-2xl border border-border" style={{ paddingTop: "56.25%" }}>
-              <iframe
-                src="https://drive.google.com/file/d/1-5iOvbyBMe51onyFqO9tXm7tH2VfJjQG/preview"
-                className="absolute inset-0 w-full h-full"
-                allow="autoplay"
-                allowFullScreen
-                title="MedicoLegalAid Course Preview"
-              />
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -283,9 +297,9 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-serif font-bold text-primary mb-2">Meet Your Instructor</h2>
-              <h3 className="text-2xl text-accent font-serif mb-6">Dr. Vinaykumar</h3>
+              <h3 className="text-2xl text-accent font-serif mb-6">Dr. Vinaykumar S</h3>
               
-              <div className="space-y-6 text-lg text-foreground/80 leading-relaxed mb-8">
+              <div className="space-y-5 text-lg text-foreground/80 leading-relaxed mb-8">
                 <p>
                   Widely regarded as one of India's most trusted medicolegal advisors for the medical community. He is a top choice for medical associations and is regularly invited to speak on legal topics affecting doctors.
                 </p>
@@ -295,11 +309,12 @@ const Home = () => {
               </div>
 
               <div className="bg-white p-6 rounded-sm border-l-4 border-accent shadow-sm">
-                <h4 className="font-bold text-primary mb-2">Credentials</h4>
+                <h4 className="font-bold text-primary mb-3">Qualifications</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent"/> LLB</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent"/> Diploma in Medical Law and Ethics (PGDMLE)</li>
-                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent"/> National Law School of India University (NLSIU), Bengaluru</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0"/> MBBS, DCH, DNB, MNAMS</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0"/> Professor of Paediatrics</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0"/> LLB</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0"/> PGDMLE — National Law School of India University (NLSIU), Bengaluru</li>
                 </ul>
               </div>
             </motion.div>
@@ -419,25 +434,40 @@ const Home = () => {
                 For group class inquiries, registration support, hospital audits, or questions, contact our course coordinator.
               </p>
               
-              <div className="space-y-6 mb-10">
+              <div className="space-y-5 mb-10">
                 <div className="flex items-center gap-4 text-foreground">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border">
-                    <Mail className="h-5 w-5 text-primary" />
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border shrink-0">
+                    <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-sm text-muted-foreground uppercase tracking-wider">Email Us</p>
-                    <p className="font-medium">contact@medicolegalaid.com</p>
+                    <p className="font-bold text-sm text-muted-foreground uppercase tracking-wider">WhatsApp / Call</p>
+                    <a href="https://wa.me/919108764680" className="font-medium text-primary hover:underline">+91 91087 64680</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4 text-foreground">
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border shrink-0">
+                    <Mail className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm text-muted-foreground uppercase tracking-wider">Email</p>
+                    <a href="mailto:contact@medicolegalaid.com" className="font-medium text-primary hover:underline">contact@medicolegalaid.com</a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 text-foreground">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center border border-border shrink-0">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="font-bold text-sm text-muted-foreground uppercase tracking-wider">Location</p>
-                    <p className="font-medium">Bengaluru, India</p>
+                    <p className="font-medium">Bengaluru, Karnataka, India</p>
                   </div>
                 </div>
+              </div>
+              <div className="bg-primary/5 border border-primary/10 rounded-sm p-5 mb-6">
+                <p className="font-bold text-primary text-sm mb-1">Instructor</p>
+                <p className="font-semibold text-foreground">Dr. Vinaykumar S</p>
+                <p className="text-sm text-muted-foreground">MBBS, DCH, DNB, MNAMS | Professor of Paediatrics</p>
+                <p className="text-sm text-muted-foreground">LLB | PGDMLE — National Law School of India University (NLSIU), Bengaluru</p>
               </div>
               
               <div className="bg-accent/10 p-6 rounded-sm border border-accent/20">
@@ -524,6 +554,7 @@ const Home = () => {
           </div>
         </div>
       </footer>
+      <WhatsAppButton />
     </div>
   );
 };
