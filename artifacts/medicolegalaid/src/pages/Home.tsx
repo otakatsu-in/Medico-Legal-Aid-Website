@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import logoImg from "@assets/Company_logo_1776338533281.png";
+import logoImg from "@assets/logomla-removebg-preview_1778045570177.png";
 import drVinayImg from "@assets/Dr_Vinay_pic_1_1776338533281.JPG";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Navbar from "@/components/Navbar";

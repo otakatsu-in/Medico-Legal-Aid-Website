@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoImg from "@assets/Company_logo_1776338533281.png";
+import logoImg from "@assets/logomla-removebg-preview_1778045570177.png";
 
 interface NavbarProps {
   activePage?: "home" | "hospitals";
