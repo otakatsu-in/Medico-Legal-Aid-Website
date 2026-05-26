@@ -5,20 +5,20 @@ import { Button } from "@/components/ui/button";
 import logoImg from "@assets/logomla-removebg-preview_1778045570177.png";
 
 interface NavbarProps {
-  activePage?: "home" | "hospitals" | "tips";
+  activePage?: "home" | "hospitals" | "tips" | "seminars";
 }
 
 export default function Navbar({ activePage = "home" }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
-  const isAway = activePage === "hospitals" || activePage === "tips";
+  const isAway = activePage === "hospitals" || activePage === "tips" || activePage === "seminars";
 
   const links = [
     { label: "About", href: isAway ? "/#about" : "#about", isRouter: isAway },
     { label: "Course", href: isAway ? "/#course" : "#course", isRouter: isAway },
     { label: "Modules", href: isAway ? "/#modules" : "#modules", isRouter: isAway },
     { label: "For Hospitals", href: "/hospitals", isRouter: true },
-    { label: "Seminars", href: isAway ? "/#seminars" : "#seminars", isRouter: isAway },
+    { label: "Seminars", href: "/seminars", isRouter: true },
     { label: "Legal Tips", href: "/tips", isRouter: true },
     { label: "Contact", href: isAway ? "/#contact" : "#contact", isRouter: isAway },
   ];
@@ -43,7 +43,8 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${
                   (activePage === "hospitals" && link.label === "For Hospitals") ||
-                  (activePage === "tips" && link.label === "Legal Tips")
+                  (activePage === "tips" && link.label === "Legal Tips") ||
+                  (activePage === "seminars" && link.label === "Seminars")
                     ? "text-primary border-b-2 border-accent pb-0.5"
                     : "text-muted-foreground hover:text-primary"
                 }`}
@@ -88,7 +89,8 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                 onClick={() => setOpen(false)}
                 className={`py-3 px-2 text-base font-medium border-b border-border/30 transition-colors ${
                   (activePage === "hospitals" && link.label === "For Hospitals") ||
-                  (activePage === "tips" && link.label === "Legal Tips")
+                  (activePage === "tips" && link.label === "Legal Tips") ||
+                  (activePage === "seminars" && link.label === "Seminars")
                     ? "text-primary font-semibold"
                     : "text-muted-foreground hover:text-primary"
                 }`}
