@@ -1,0 +1,108 @@
+Add a new section to the existing MedicoLegalAid website called "CME Medicolegal Workshop" — an offline seminar offering for hospitals and medical associations. Match the existing site's design system, colors, fonts, spacing, and component style exactly — do not introduce new design elements.
+
+Section ID: #seminars — add it to the navbar between "For Hospitals" and "Legal Tips".
+
+SECTION CONTENT TO BUILD:
+
+1. Hero/Intro Block
+
+Headline: "CME Medicolegal Workshop"
+
+Subheading: "Live, on-site medicolegal training for doctors — conducted by Dr. Vinaykumar S"
+
+Brief intro paragraph: "A full-day, interactive CME workshop designed for hospitals and medical associations. Built for practising doctors, residents, and clinical staff who need practical, court-ready medicolegal knowledge — not just theory."
+
+2. Workshop Snapshot — 4 stat/icon cards in a row
+
+🕐 Duration: Full-Day Session (6–7 Hours)
+
+👨‍⚕️ Audience Size: 50–200 Doctors & Clinical Staff
+
+📍 Mode: On-Site — At Your Hospital or Association Venue
+
+🏅 CME Credit Points Applicable
+
+3. Who Should Attend — 2 column cards
+
+Hospitals & Nursing Homes: In-house CME, induction training, or medicolegal compliance sessions for medical and nursing staff
+
+Medical Associations (IMA Chapters, Specialty Societies): Member education events, annual conferences, or dedicated medicolegal workshops
+
+4. What the Workshop Covers — styled 2-column list
+Heading: "Topics Covered" with subtext: "Topics can be customized to your hospital's specialty and risk areas"
+
+Legal Framework, Consumer Protection Act & Landmark Judgments
+
+Valid Consent Documentation — What Holds Up in Court
+
+MLC Handling in OPD & IPD Settings
+
+Medical Negligence — Civil vs Criminal Liability, Bolam Test
+
+MLC Documentation — Drafting, Preservation & Model Formats
+
+Clinical Specialty Scenarios (Customizable)
+
+Top Medicolegal Mistakes Doctors Make — and How to Avoid Them
+
+Confidence Building for Real-World Medicolegal Challenges
+
+Certificate of Participation issued to all attendees
+
+5. What Your Hospital Gets — value proposition checklist block
+Heading: "What Your Institution Gains"
+
+Reduced medicolegal risk exposure for all clinical staff
+
+Practical upgrades to consent and MLC documentation practices
+
+Doctors confident in handling police, courts, and patient disputes
+
+Complements the Hospital Medicolegal Audit (link to #hospitals section)
+
+6. Why Dr. Vinaykumar — compact credentials block (already exists on site as "Meet Your Instructor", build a compact version here)
+
+Widely regarded as one of India's most trusted medicolegal advisors for the medical community
+
+MBBS, DCH, DNB, MNAMS | LLB | PGDMLE — NLSIU Bengaluru
+
+Professor of Paediatrics — rare dual expertise: practising clinician + medicolegal expert
+
+Regularly invited by hospitals and medical associations across India to speak on legal topics affecting doctors
+
+Case-based, practical delivery — not a law lecture
+
+7. "What Every Doctor Must Know" — pull a relevant highlight block
+Reuse the same "What Every Doctor Must Know" fact-card style already present on the homepage for 2–3 key facts that apply specifically to the seminar context:
+
+It is a legal and ethical duty for doctors to report an MLC to the police immediately — the patient's consent is NOT required.
+
+A single mistake in consent documentation can lead to massive compensation claims.
+
+An MLC report prepared by a doctor is crucial documentary evidence in criminal trials.
+
+8. Seminar Enquiry Form
+Heading: "Request a CME Workshop"
+Subtext: "Fill in your details and we'll respond within 24 hours with a proposal."
+
+Form fields:
+
+Full Name (text, required)
+
+Designation (text, required)
+
+Hospital / Association Name (text, required)
+
+City (text, required)
+
+Estimated Number of Attendees (dropdown: 50–100 / 100–150 / 150–200 / 200+, required)
+
+Preferred Date Range (text input, required)
+
+Specialty Focus or Topics of Interest (textarea, optional)
+
+Phone Number (tel, required)
+
+Email Address (email, required)
+
+Submit Button: "Send Workshop Enquiry"

@@ -5,7 +5,7 @@ import {
   Scale, Shield, AlertTriangle, BookOpen, 
   CheckCircle, ArrowRight, PlayCircle, 
   FileText, Users, Award, ChevronDown, Mail,
-  Phone, MapPin
+  Phone, MapPin, Clock, Building2, Medal, Calendar
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -403,6 +403,265 @@ const Home = () => {
         </div>
       </section>
 
+      {/* CME Medicolegal Workshop / Seminars */}
+      <section id="seminars" className="py-24 bg-secondary">
+        <div className="container mx-auto px-4">
+
+          {/* Intro */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 mb-6">
+              <Medal className="h-4 w-4 text-accent" />
+              <span className="text-xs font-bold tracking-wider uppercase text-accent">For Hospitals &amp; Medical Associations</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-serif font-bold text-primary mb-4">CME Medicolegal Workshop</h2>
+            <p className="text-xl text-muted-foreground mb-4">Live, on-site medicolegal training for doctors — conducted by Dr. Vinaykumar S</p>
+            <p className="text-lg text-foreground/75 leading-relaxed">
+              A full-day, interactive CME workshop designed for hospitals and medical associations. Built for practising doctors, residents, and clinical staff who need practical, court-ready medicolegal knowledge — not just theory.
+            </p>
+          </div>
+
+          {/* Workshop Snapshot — 4 stat cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+            {[
+              { icon: Clock, stat: "Full-Day Session", sub: "6–7 Hours" },
+              { icon: Users, stat: "50–200 Participants", sub: "Doctors & Clinical Staff" },
+              { icon: Building2, stat: "On-Site", sub: "At Your Hospital or Venue" },
+              { icon: Medal, stat: "CME Credit Points", sub: "Applicable" },
+            ].map(({ icon: Icon, stat, sub }, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                className="bg-white border border-border rounded-sm p-6 text-center shadow-sm"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mx-auto mb-4">
+                  <Icon className="h-6 w-6 text-accent" />
+                </div>
+                <p className="font-bold text-primary text-base leading-tight">{stat}</p>
+                <p className="text-sm text-muted-foreground mt-1">{sub}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Who Should Attend + Topics Covered */}
+          <div className="grid lg:grid-cols-2 gap-10 mb-16">
+
+            {/* Who Should Attend */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white border border-border rounded-sm p-8 shadow-sm"
+            >
+              <h3 className="text-2xl font-serif font-bold text-primary mb-6">Who Should Attend</h3>
+              <div className="space-y-5">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 mt-0.5">
+                    <Building2 className="h-5 w-5 text-accent" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-1">Hospitals &amp; Nursing Homes</p>
+                    <p className="text-muted-foreground leading-relaxed">In-house CME, induction training, or medicolegal compliance sessions for medical and nursing staff.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center shrink-0 mt-0.5">
+                    <Users className="h-5 w-5 text-accent" />
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground mb-1">Medical Associations</p>
+                    <p className="text-muted-foreground leading-relaxed">IMA Chapters, Specialty Societies — member education events, annual conferences, or dedicated medicolegal workshops.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Topics Covered */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white border border-border rounded-sm p-8 shadow-sm"
+            >
+              <h3 className="text-2xl font-serif font-bold text-primary mb-1">Topics Covered</h3>
+              <p className="text-sm text-muted-foreground mb-6">Topics can be customised to your hospital's specialty and risk areas.</p>
+              <ul className="space-y-3">
+                {[
+                  "Legal Framework, Consumer Protection Act & Landmark Judgments",
+                  "Valid Consent Documentation — What Holds Up in Court",
+                  "MLC Handling in OPD & IPD Settings",
+                  "Medical Negligence — Civil vs Criminal Liability, Bolam Test",
+                  "MLC Documentation — Drafting, Preservation & Model Formats",
+                  "Clinical Specialty Scenarios (Customisable)",
+                  "Top Medicolegal Mistakes Doctors Make — and How to Avoid Them",
+                  "Confidence Building for Real-World Medicolegal Challenges",
+                ].map((topic, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-1" />
+                    <span className="text-foreground/85 text-sm leading-relaxed">{topic}</span>
+                  </li>
+                ))}
+                <li className="flex items-start gap-3 pt-2 border-t border-border">
+                  <Award className="h-4 w-4 text-accent shrink-0 mt-1" />
+                  <span className="font-medium text-foreground text-sm">Certificate of Participation issued to all attendees</span>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* What Your Institution Gains + Why Dr. Vinaykumar */}
+          <div className="grid lg:grid-cols-2 gap-10 mb-16">
+
+            {/* What Your Institution Gains */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-primary text-primary-foreground rounded-sm p-8 shadow-sm"
+            >
+              <h3 className="text-2xl font-serif font-bold mb-6">What Your Institution Gains</h3>
+              <ul className="space-y-4">
+                {[
+                  "Reduced medicolegal risk exposure for all clinical staff",
+                  "Practical upgrades to consent and MLC documentation practices",
+                  "Doctors confident in handling police, courts, and patient disputes",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                    <span className="text-primary-foreground/85 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+                <li className="flex items-start gap-3 pt-2 border-t border-primary-foreground/20">
+                  <ArrowRight className="h-5 w-5 text-accent shrink-0 mt-0.5" />
+                  <span className="text-primary-foreground/85 leading-relaxed">
+                    Complements the{" "}
+                    <a href="#hospitals" className="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors">Hospital Medicolegal Audit</a>
+                    {" "}— for complete institutional coverage.
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Why Dr. Vinaykumar — compact */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-white border border-border rounded-sm p-8 shadow-sm"
+            >
+              <h3 className="text-2xl font-serif font-bold text-primary mb-2">Why Dr. Vinaykumar</h3>
+              <p className="text-muted-foreground text-sm mb-6">Widely regarded as one of India's most trusted medicolegal advisors for the medical community.</p>
+              <div className="bg-secondary rounded-sm p-5 mb-6">
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0" /> MBBS, DCH, DNB, MNAMS | LLB | PGDMLE — NLSIU Bengaluru</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0" /> Professor of Paediatrics — rare dual expertise: practising clinician + medicolegal expert</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0" /> Regularly invited by hospitals and medical associations across India</li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent shrink-0" /> Case-based, practical delivery — not a law lecture</li>
+                </ul>
+              </div>
+              <Button asChild size="default" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-sm">
+                <a href="#seminar-enquiry">Request a Workshop</a>
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Key Facts highlight — 3 cards */}
+          <div className="bg-primary rounded-sm p-8 md:p-12 mb-16">
+            <h3 className="text-2xl font-serif font-bold text-primary-foreground text-center mb-8">What Every Doctor Must Know</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                "It is a legal and ethical duty for doctors to report an MLC to the police immediately — the patient's consent is NOT required.",
+                "A single mistake in consent documentation can lead to massive compensation claims.",
+                "An MLC report prepared by a doctor is crucial documentary evidence in criminal trials.",
+              ].map((fact, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-sm p-6"
+                >
+                  <p className="text-primary-foreground leading-relaxed text-sm">{fact}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Seminar Enquiry Form */}
+          <div id="seminar-enquiry" className="max-w-3xl mx-auto bg-white border border-border rounded-sm p-8 md:p-12 shadow-xl">
+            <h3 className="text-3xl font-serif font-bold text-primary mb-2">Request a CME Workshop</h3>
+            <p className="text-muted-foreground mb-8">Fill in your details and we'll respond within 24 hours with a proposal.</p>
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="sem-name">Full Name <span className="text-destructive">*</span></Label>
+                  <Input id="sem-name" placeholder="Dr. First Last" required className="rounded-sm" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="sem-designation">Designation <span className="text-destructive">*</span></Label>
+                  <Input id="sem-designation" placeholder="e.g. Medical Superintendent" required className="rounded-sm" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="sem-org">Hospital / Association Name <span className="text-destructive">*</span></Label>
+                  <Input id="sem-org" placeholder="e.g. City General Hospital" required className="rounded-sm" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="sem-city">City <span className="text-destructive">*</span></Label>
+                  <Input id="sem-city" placeholder="e.g. Bengaluru" required className="rounded-sm" />
+                </div>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="sem-attendees">Estimated Number of Attendees <span className="text-destructive">*</span></Label>
+                  <select
+                    id="sem-attendees"
+                    required
+                    className="w-full h-10 rounded-sm border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  >
+                    <option value="">Select range…</option>
+                    <option value="50-100">50–100</option>
+                    <option value="100-150">100–150</option>
+                    <option value="150-200">150–200</option>
+                    <option value="200+">200+</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="sem-date">Preferred Date Range <span className="text-destructive">*</span></Label>
+                  <Input id="sem-date" placeholder="e.g. March 2026 or Q2 2026" required className="rounded-sm" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="sem-topics">Specialty Focus or Topics of Interest <span className="text-muted-foreground text-xs">(optional)</span></Label>
+                <Textarea id="sem-topics" placeholder="e.g. Consent documentation, MLC handling for ICU staff…" className="min-h-[100px] rounded-sm" />
+              </div>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="sem-phone">Phone Number <span className="text-destructive">*</span></Label>
+                  <Input id="sem-phone" type="tel" placeholder="+91 98765 43210" required className="rounded-sm" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="sem-email">Email Address <span className="text-destructive">*</span></Label>
+                  <Input id="sem-email" type="email" placeholder="doctor@hospital.com" required className="rounded-sm" />
+                </div>
+              </div>
+              <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-sm">
+                Send Workshop Enquiry
+              </Button>
+            </form>
+          </div>
+
+        </div>
+      </section>
+
       {/* Contact / Enrollment */}
       <section id="enroll" className="py-24 bg-muted/30 border-t border-border">
         <div className="container mx-auto px-4">
@@ -513,6 +772,7 @@ const Home = () => {
                 <li><a href="#course" className="hover:text-accent transition-colors">Course</a></li>
                 <li><a href="#modules" className="hover:text-accent transition-colors">Modules</a></li>
                 <li><a href="#hospitals" className="hover:text-accent transition-colors">For Hospitals</a></li>
+                <li><a href="#seminars" className="hover:text-accent transition-colors">Seminars</a></li>
                 <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
               </ul>
             </div>

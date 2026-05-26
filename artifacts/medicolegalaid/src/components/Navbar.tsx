@@ -18,6 +18,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
     { label: "Course", href: isAway ? "/#course" : "#course", isRouter: isAway },
     { label: "Modules", href: isAway ? "/#modules" : "#modules", isRouter: isAway },
     { label: "For Hospitals", href: "/hospitals", isRouter: true },
+    { label: "Seminars", href: isAway ? "/#seminars" : "#seminars", isRouter: isAway },
     { label: "Legal Tips", href: "/tips", isRouter: true },
     { label: "Contact", href: isAway ? "/#contact" : "#contact", isRouter: isAway },
   ];
